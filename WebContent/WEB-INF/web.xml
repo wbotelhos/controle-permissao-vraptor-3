@@ -3,7 +3,7 @@
 
 	<context-param>
 		<param-name>br.com.caelum.vraptor.packages</param-name>
-		<param-value>com.wordpress.wbotelhos</param-value>
+		<param-value>com.wbotelhos</param-value>
 	</context-param>
 
 	<filter>

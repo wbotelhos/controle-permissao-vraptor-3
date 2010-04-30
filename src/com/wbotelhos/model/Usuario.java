@@ -1,10 +1,10 @@
-package com.wordpress.wbotelhos.model;
+package com.wbotelhos.model;
 
-import com.wordpress.wbotelhos.model.common.TipoPerfil;
+import com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @artigo http://wbotelhos.com/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 public class Usuario {

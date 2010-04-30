@@ -1,4 +1,4 @@
-package com.wordpress.wbotelhos.dao;
+package com.wbotelhos.dao;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,11 +6,11 @@ import java.util.Collection;
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
 
-import com.wordpress.wbotelhos.model.Usuario;
+import com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @artigo http://wbotelhos.com/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 @Component

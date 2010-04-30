@@ -1,4 +1,4 @@
-package com.wordpress.wbotelhos.interceptor;
+package com.wbotelhos.interceptor;
 
 import static br.com.caelum.vraptor.view.Results.logic;
 
@@ -13,14 +13,14 @@ import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.com.caelum.vraptor.ioc.RequestScoped;
 import br.com.caelum.vraptor.resource.ResourceMethod;
 
-import com.wordpress.wbotelhos.controller.IndexController;
-import com.wordpress.wbotelhos.controller.UsuarioController;
-import com.wordpress.wbotelhos.model.Usuario;
-import com.wordpress.wbotelhos.model.common.TipoPerfil;
+import com.wbotelhos.controller.IndexController;
+import com.wbotelhos.controller.UsuarioController;
+import com.wbotelhos.model.Usuario;
+import com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @artigo http://wbotelhos.com/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 @Intercepts

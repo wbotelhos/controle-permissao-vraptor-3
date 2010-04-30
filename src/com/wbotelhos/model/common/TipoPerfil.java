@@ -1,11 +1,11 @@
-package com.wordpress.wbotelhos.model.common;
+package com.wbotelhos.model.common;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @artigo http://wbotelhos.com/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 public enum TipoPerfil {
