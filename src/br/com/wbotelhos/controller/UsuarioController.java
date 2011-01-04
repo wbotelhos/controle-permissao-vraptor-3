@@ -46,7 +46,7 @@ public class UsuarioController {
 	}
 
 	@Get
-	@Path("/usuario/remover/{usuario.id}")
+	@Path("/usuario/{usuario.id}/remover")
 	@Permissao({TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR})
 	public void remover(Usuario usuario) {
 		usuarioDao.remover(usuario);

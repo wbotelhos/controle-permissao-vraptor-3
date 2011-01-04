@@ -17,7 +17,7 @@
 		</form><br/><br/>
 
 		<c:forEach items="${sessionScope.usuarioDao.usuarioList}" var="item">
-			${item.nome} <a href="<c:url value='/usuario/remover/${item.id}'/>">Remover</a><br/>
+			${item.nome} <a href="<c:url value='/usuario/${item.id}/remover'/>">Remover</a><br/>
 		</c:forEach>
 	</body>
 </html>
