@@ -30,8 +30,4 @@ public class UsuarioDao {
 		return usuarios;
 	}
 
-	public void setUsuarios(Collection<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
-
 }
