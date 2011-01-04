@@ -12,7 +12,7 @@
 		<a href="<c:url value='/'/>">Menu</a><br/>
 		<h3>${message}</h3>
 		
-		<form action="<c:url value='/usuario/adicionar'/>" method="post">
+		<form action="<c:url value='/usuario'/>" method="post">
 			<input type="text" name="usuario.nome"/> <input type="submit" value="Adicionar"/>
 		</form><br/><br/>
 

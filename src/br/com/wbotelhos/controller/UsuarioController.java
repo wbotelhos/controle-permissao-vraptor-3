@@ -34,7 +34,7 @@ public class UsuarioController {
 	}
 
 	@Post
-	@Path("/usuario/adicionar")
+	@Path("/usuario")
 	@Permissao(TipoPerfil.MODERADOR)
 	public void adicionar(Usuario usuario) {
 		usuario.setId((long) (usuarioDao.getUsuarios().size() + 1));
