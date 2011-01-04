@@ -1,4 +1,4 @@
-package com.wbotelhos.interceptor;
+package br.com.wbotelhos.interceptor;
 
 import static br.com.caelum.vraptor.view.Results.logic;
 
@@ -12,11 +12,10 @@ import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.com.caelum.vraptor.ioc.RequestScoped;
 import br.com.caelum.vraptor.resource.ResourceMethod;
-
-import com.wbotelhos.controller.IndexController;
-import com.wbotelhos.controller.UsuarioController;
-import com.wbotelhos.model.Usuario;
-import com.wbotelhos.model.common.TipoPerfil;
+import br.com.wbotelhos.controller.IndexController;
+import br.com.wbotelhos.controller.UsuarioController;
+import br.com.wbotelhos.model.Usuario;
+import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos

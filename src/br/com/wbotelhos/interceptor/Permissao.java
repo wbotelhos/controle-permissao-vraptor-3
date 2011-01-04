@@ -1,9 +1,9 @@
-package com.wbotelhos.interceptor;
+package br.com.wbotelhos.interceptor;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.wbotelhos.model.common.TipoPerfil;
+import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos

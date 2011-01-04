@@ -1,12 +1,11 @@
-package com.wbotelhos.dao;
+package br.com.wbotelhos.dao;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
-
-import com.wbotelhos.model.Usuario;
+import br.com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos

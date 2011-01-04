@@ -1,6 +1,6 @@
-package com.wbotelhos.model;
+package br.com.wbotelhos.model;
 
-import com.wbotelhos.model.common.TipoPerfil;
+import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos

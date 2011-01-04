@@ -1,12 +1,11 @@
-package com.wbotelhos.controller;
+package br.com.wbotelhos.controller;
 
 import javax.servlet.http.HttpSession;
 
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
-
-import com.wbotelhos.model.Usuario;
-import com.wbotelhos.model.common.TipoPerfil;
+import br.com.wbotelhos.model.Usuario;
+import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho dos Santos

@@ -1,4 +1,4 @@
-package com.wbotelhos.model.common;
+package br.com.wbotelhos.model.common;
 
 import java.util.ArrayList;
 import java.util.Collection;
