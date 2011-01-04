@@ -9,7 +9,7 @@
 		<title>http://wbotelhos.com.br</title>
 	</head>
 	<body>
-		<a href="<c:url value='/usuario/listar'/>">Listar usuários</a><br/>
+		<a href="<c:url value='/usuario'/>">Listar usuários</a><br/>
 		<a href="<c:url value='/admin'/>">Administração</a>
 	</body>
 </html>
