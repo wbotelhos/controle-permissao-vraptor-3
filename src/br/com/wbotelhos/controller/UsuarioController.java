@@ -29,7 +29,7 @@ public class UsuarioController {
 	@Get
 	@Path("/usuario")
 	public void listagem() {
-		int tam = usuarioDao.getUsuarioList().size();
+		int tam = usuarioDao.getUsuarios().size();
 		result.include("message",  "[" + tam + "] usuário(s) encontrado(s)...");
 	}
 
@@ -37,7 +37,7 @@ public class UsuarioController {
 	@Path("/usuario/adicionar")
 	@Permissao(TipoPerfil.MODERADOR)
 	public void adicionar(Usuario usuario) {
-		usuario.setId((long) (usuarioDao.getUsuarioList().size() + 1));
+		usuario.setId((long) (usuarioDao.getUsuarios().size() + 1));
 		usuarioDao.adicionar(usuario);
 
 		result

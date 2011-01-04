@@ -16,22 +16,22 @@ import br.com.wbotelhos.model.Usuario;
 @SessionScoped
 public class UsuarioDao {
 
-	private Collection<Usuario> usuarioList = new ArrayList<Usuario>();
+	private Collection<Usuario> usuarios = new ArrayList<Usuario>();
 
 	public void adicionar(Usuario usuario) {
-		usuarioList.add(usuario);
+		usuarios.add(usuario);
 	}
 
 	public void remover(Usuario usuario) {
-		usuarioList.remove(usuario);
+		usuarios.remove(usuario);
 	}
 
-	public Collection<Usuario> getUsuarioList() {
-		return usuarioList;
+	public Collection<Usuario> getUsuarios() {
+		return usuarios;
 	}
 
-	public void setUsuarioList(Collection<Usuario> usuarioList) {
-		this.usuarioList = usuarioList;
+	public void setUsuarios(Collection<Usuario> usuarios) {
+		this.usuarios = usuarios;
 	}
 
 }

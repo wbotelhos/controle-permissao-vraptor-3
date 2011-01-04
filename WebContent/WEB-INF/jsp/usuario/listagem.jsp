@@ -16,8 +16,8 @@
 			<input type="text" name="usuario.nome"/> <input type="submit" value="Adicionar"/>
 		</form><br/><br/>
 
-		<c:forEach items="${sessionScope.usuarioDao.usuarioList}" var="item">
-			${item.nome} <a href="<c:url value='/usuario/${item.id}/remover'/>">Remover</a><br/>
+		<c:forEach items="${sessionScope.usuarioDao.usuarios}" var="usuario">
+			${usuario.nome} <a href="<c:url value='/usuario/${usuario.id}/remover'/>">Remover</a><br/>
 		</c:forEach>
 	</body>
 </html>
