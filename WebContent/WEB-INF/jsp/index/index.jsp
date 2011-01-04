@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>http://wbotelhos.com</title>
+		<title>http://wbotelhos.com.br</title>
 	</head>
 	<body>
 		<a href="<c:url value='/usuario/listar'/>">Listar usuários</a><br/>

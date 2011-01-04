@@ -18,8 +18,8 @@ import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
- * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @author Washington Botelho
+ * @artigo http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 @Intercepts
