@@ -1,7 +1,5 @@
 package br.com.wbotelhos.interceptor;
 
-import static br.com.caelum.vraptor.view.Results.logic;
-
 import java.util.Arrays;
 
 import javax.servlet.http.HttpSession;
@@ -45,7 +43,7 @@ public class PermissaoInterceptor implements Interceptor {
 		if (isAcessoMetodo(method) && isAcessoController(method)) {
 			stack.next(method, resourceInstance);
 		} else {
-			result.use(logic()).redirectTo(UsuarioController.class).negado();
+			result.redirectTo(UsuarioController.class).negado();
 		}
 	}
 
