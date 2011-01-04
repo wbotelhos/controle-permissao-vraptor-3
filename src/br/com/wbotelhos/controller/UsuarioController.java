@@ -16,7 +16,6 @@ import br.com.wbotelhos.model.common.TipoPerfil;
  */
 
 @Resource
-@Path("/usuario")
 public class UsuarioController {
 
 	private Result result;
@@ -28,32 +27,37 @@ public class UsuarioController {
 	}
 
 	@Get
-	public void listar() {
+	@Path("/usuario")
+	public void listagem() {
 		int tam = usuarioDao.getUsuarioList().size();
 		result.include("msg",  "[" + tam + "] usuário(s) encontrado(s)...");
 	}
 
 	@Post
-	@Path("/adicionar")
+	@Path("/usuario/adicionar")
 	@Permissao(TipoPerfil.MODERADOR)
 	public void adicionar(Usuario usuario) {
 		usuario.setId((long) (usuarioDao.getUsuarioList().size() + 1));
 		usuarioDao.adicionar(usuario);
-		result.include("msg", "Usuário adicionado com sucesso!");
-		result.redirectTo(getClass()).listar();
+
+		result
+		.include("msg", "Usuário adicionado com sucesso!")
+		.redirectTo(this).listagem();
 	}
 
 	@Get
-	@Path("/remover/{usuario.id}")
+	@Path("/usuario/remover/{usuario.id}")
 	@Permissao({TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR})
 	public void remover(Usuario usuario) {
 		usuarioDao.remover(usuario);
-		result.include("msg", "Usuário removido com sucesso!");
-		result.redirectTo(getClass()).listar();
+
+		result
+		.include("msg", "Usuário removido com sucesso!")
+		.redirectTo(this).listagem();
 	}
 
 	@Get
-	@Path("/negado")
+	@Path("/usuario/negado")
 	public void negado() {
 		result.include("msg", "Ops! Você não pode fazer isso! (:");
 	}
