@@ -2,6 +2,7 @@ package br.com.wbotelhos.controller;
 
 import javax.servlet.http.HttpSession;
 
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.wbotelhos.model.Usuario;
@@ -21,16 +22,17 @@ public class IndexController {
 		this.session = session;
 	}
 
+	@Get
 	@Path("/")
 	public void index() {
 		session.setAttribute("user", this.getUsuario());
 	}
 	
 	private Usuario getUsuario() {
-		Usuario entity = new Usuario();
-		entity.setNome("Washington Botelho");
-		entity.setPerfil(TipoPerfil.MODERADOR);
-		return entity;
+		Usuario usuario = new Usuario();
+		usuario.setNome("Washington Botelho");
+		usuario.setPerfil(TipoPerfil.MODERADOR);
+		return usuario;
 	}
 
 }
