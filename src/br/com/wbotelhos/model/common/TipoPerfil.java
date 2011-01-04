@@ -13,12 +13,13 @@ public enum TipoPerfil {
 	MEMBRO, MODERADOR, ADMINISTRADOR;
 
 	public static Collection<TipoPerfil> loadAll() {
-		Collection<TipoPerfil> perfilList = new ArrayList<TipoPerfil>();
+		Collection<TipoPerfil> perfis = new ArrayList<TipoPerfil>();
 
-		for (TipoPerfil item : values()) {
-			perfilList.add(item);
+		for (TipoPerfil perfil : values()) {
+			perfis.add(perfil);
 		}
-		return perfilList;
+
+		return perfis;
 	}
 
 }
