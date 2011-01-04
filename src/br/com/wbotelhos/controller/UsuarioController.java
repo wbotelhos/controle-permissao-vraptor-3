@@ -30,7 +30,7 @@ public class UsuarioController {
 	@Path("/usuario")
 	public void listagem() {
 		int tam = usuarioDao.getUsuarioList().size();
-		result.include("msg",  "[" + tam + "] usuário(s) encontrado(s)...");
+		result.include("message",  "[" + tam + "] usuário(s) encontrado(s)...");
 	}
 
 	@Post
@@ -41,7 +41,7 @@ public class UsuarioController {
 		usuarioDao.adicionar(usuario);
 
 		result
-		.include("msg", "Usuário adicionado com sucesso!")
+		.include("message", "Usuário adicionado com sucesso!")
 		.redirectTo(this).listagem();
 	}
 
@@ -52,14 +52,14 @@ public class UsuarioController {
 		usuarioDao.remover(usuario);
 
 		result
-		.include("msg", "Usuário removido com sucesso!")
+		.include("message", "Usuário removido com sucesso!")
 		.redirectTo(this).listagem();
 	}
 
 	@Get
 	@Path("/usuario/negado")
 	public void negado() {
-		result.include("msg", "Ops! Você não pode fazer isso! (:");
+		result.include("message", "Ops! Você não pode fazer isso! (:");
 	}
 
 }

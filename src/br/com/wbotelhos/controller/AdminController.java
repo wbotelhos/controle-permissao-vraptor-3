@@ -25,7 +25,7 @@ public class AdminController {
 	@Get
 	@Path("/admin")
 	public void admin() {
-		result.include("msg", "Seja bem-vindo ao painel administrativo");
+		result.include("message", "Seja bem-vindo ao painel administrativo");
 	}
 
 }

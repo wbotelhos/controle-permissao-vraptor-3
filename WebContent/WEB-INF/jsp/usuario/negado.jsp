@@ -10,6 +10,6 @@
 	</head>
 	<body>
 		<a href="<c:url value='/'/>">Menu</a><br/>
-		<h3 style="color: red;">${msg}</h3>
+		<h3 style="color: red;">${message}</h3>
 	</body>
 </html>
