@@ -8,23 +8,33 @@
 		</layout>
 	</appender>
 
-	<category name="org.vraptor">
-		<priority value="INFO" />
+	<category name="br.com.caelum.vraptor">
+		<priority value="DEBUG" />
+		<appender-ref ref="stdout" />
+	</category>
+
+	<category name="com.mchange">
+		<priority value="DEBUG" />
 		<appender-ref ref="stdout" />
 	</category>
 
 	<category name="com.thoughtworks">
-		<priority value="INFO" />
+		<priority value="DEBUG" />
 		<appender-ref ref="stdout" />
 	</category>
 
-	<category name="br.com.caelum.vraptor">
-		<priority value="INFO" />
+	<category name="org.hibernate">
+		<priority value="DEBUG" />
 		<appender-ref ref="stdout" />
 	</category>
 
 	<category name="org.springframework">
-		<priority value="INFO" />
+		<priority value="DEBUG" />
+		<appender-ref ref="stdout" />
+	</category>
+
+	<category name="org.vraptor">
+		<priority value="DEBUG" />
 		<appender-ref ref="stdout" />
 	</category>
 
