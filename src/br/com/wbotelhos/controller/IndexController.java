@@ -3,7 +3,6 @@ package br.com.wbotelhos.controller;
 import javax.servlet.http.HttpSession;
 
 import br.com.caelum.vraptor.Get;
-import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
@@ -22,17 +21,13 @@ public class IndexController {
 		this.session = session;
 	}
 
-	@Get
-	@Path("/")
+	@Get("/")
 	public void index() {
-		session.setAttribute("user", this.getUsuario());
-	}
-	
-	private Usuario getUsuario() {
 		Usuario usuario = new Usuario();
 		usuario.setNome("Washington Botelho");
 		usuario.setPerfil(TipoPerfil.MODERADOR);
-		return usuario;
+
+		session.setAttribute("user", usuario);
 	}
 
 }
