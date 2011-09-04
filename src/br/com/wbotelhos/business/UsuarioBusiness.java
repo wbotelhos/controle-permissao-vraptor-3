@@ -16,18 +16,18 @@ import br.com.wbotelhos.model.Usuario;
 @SessionScoped
 public class UsuarioBusiness {
 
-	private Collection<Usuario> usuarios = new ArrayList<Usuario>();
+	private Collection<Usuario> manager = new ArrayList<Usuario>();
 
-	public void adicionar(Usuario usuario) {
-		usuarios.add(usuario);
+	public void save(Usuario usuario) {
+		manager.add(usuario);
 	}
 
-	public void remover(Usuario usuario) {
-		usuarios.remove(usuario);
+	public void remove(Usuario usuario) {
+		manager.remove(usuario);
 	}
 
-	public Collection<Usuario> getUsuarios() {
-		return usuarios;
+	public Collection<Usuario> loadAll() {
+		return manager;
 	}
 
 }
