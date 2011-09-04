@@ -1,7 +1,9 @@
 package br.com.wbotelhos.controller;
 
+import java.util.Collection;
+
+import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
-import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
@@ -19,47 +21,46 @@ import br.com.wbotelhos.model.common.TipoPerfil;
 public class UsuarioController {
 
 	private Result result;
-	private UsuarioBusiness usuarioDao;
+	private UsuarioBusiness business;
 
 	public UsuarioController(Result result, UsuarioBusiness usuarioDao) {
 		this.result = result;
-		this.usuarioDao = usuarioDao;
+		this.business = usuarioDao;
 	}
 
-	@Get
-	@Path("/usuario")
+	@Get("/usuario")
 	public void listagem() {
-		int tam = usuarioDao.getUsuarios().size();
-		result.include("message",  "[" + tam + "] usuário(s) encontrado(s)...");
+		Collection<Usuario> usuarioList = business.loadAll();
+
+		result
+		.include("usuarioList",  usuarioList)
+		.include("notice",  "[" + usuarioList.size() + "] usuário(s) encontrado(s)...");
 	}
 
-	@Post
-	@Path("/usuario")
+	@Post("/usuario")
 	@Permissao(TipoPerfil.MODERADOR)
 	public void adicionar(Usuario usuario) {
-		usuario.setId((long) (usuarioDao.getUsuarios().size() + 1));
-		usuarioDao.adicionar(usuario);
+		usuario.setId((long) business.loadAll().size() + 1);
+
+		business.save(usuario);
 
 		result
-		.include("message", "Usuário adicionado com sucesso!")
+		.include("notice", "Usuário adicionado com sucesso!")
 		.redirectTo(this).listagem();
 	}
 
-	@Get
-	@Path("/usuario/{usuario.id}/remover")
-	@Permissao({TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR})
+	@Delete("/usuario/{usuario.id}")
+	@Permissao({ TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR })
 	public void remover(Usuario usuario) {
-		usuarioDao.remover(usuario);
+		business.remove(usuario);
 
 		result
-		.include("message", "Usuário removido com sucesso!")
+		.include("notice", "Usuário removido com sucesso!")
 		.redirectTo(this).listagem();
 	}
 
-	@Get
-	@Path("/usuario/negado")
 	public void negado() {
-		result.include("message", "Ops! Você não pode fazer isso! (:");
+		result.include("notice", "Ops! Você não pode fazer isso! (:");
 	}
 
 }
