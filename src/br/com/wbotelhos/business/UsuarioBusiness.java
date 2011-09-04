@@ -1,4 +1,4 @@
-package br.com.wbotelhos.dao;
+package br.com.wbotelhos.business;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,7 +14,7 @@ import br.com.wbotelhos.model.Usuario;
 
 @Component
 @SessionScoped
-public class UsuarioDao {
+public class UsuarioBusiness {
 
 	private Collection<Usuario> usuarios = new ArrayList<Usuario>();
 

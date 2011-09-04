@@ -5,7 +5,7 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
-import br.com.wbotelhos.dao.UsuarioDao;
+import br.com.wbotelhos.business.UsuarioBusiness;
 import br.com.wbotelhos.interceptor.Permissao;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
@@ -19,9 +19,9 @@ import br.com.wbotelhos.model.common.TipoPerfil;
 public class UsuarioController {
 
 	private Result result;
-	private UsuarioDao usuarioDao;
+	private UsuarioBusiness usuarioDao;
 
-	public UsuarioController(Result result, UsuarioDao usuarioDao) {
+	public UsuarioController(Result result, UsuarioBusiness usuarioDao) {
 		this.result = result;
 		this.usuarioDao = usuarioDao;
 	}
