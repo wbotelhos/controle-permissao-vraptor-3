@@ -1,24 +1,24 @@
 package br.com.wbotelhos.controller;
 
-import javax.servlet.http.HttpSession;
-
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Resource;
+import br.com.wbotelhos.component.UserSession;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
 
 /**
  * @author Washington Botelho
- * @artigo http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @artigo 
+ *         http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 @Resource
 public class IndexController {
 
-	private HttpSession session;
+	private UserSession userSession;
 
-	public IndexController(HttpSession session) {
-		this.session = session;
+	public IndexController(UserSession userSession) {
+		this.userSession = userSession;
 	}
 
 	@Get("/")
@@ -27,7 +27,7 @@ public class IndexController {
 		usuario.setNome("Washington Botelho");
 		usuario.setPerfil(TipoPerfil.MODERADOR);
 
-		session.setAttribute("user", usuario);
+		userSession.setUser(usuario);
 	}
 
 }
