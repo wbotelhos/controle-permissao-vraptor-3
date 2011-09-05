@@ -29,12 +29,8 @@ public class UsuarioController {
 	}
 
 	@Get("/usuario")
-	public void listagem() {
-		Collection<Usuario> usuarioList = business.loadAll();
-
-		result
-		.include("usuarioList",  usuarioList)
-		.include("notice",  "[" + usuarioList.size() + "] usuário(s) encontrado(s)...");
+	public Collection<Usuario> listagem() {
+		return business.loadAll();
 	}
 
 	@Post("/usuario")
