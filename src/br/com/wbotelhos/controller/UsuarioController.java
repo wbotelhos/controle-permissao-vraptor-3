@@ -39,7 +39,7 @@ public class UsuarioController {
 
 	@Post("/usuario")
 	@Permissao(TipoPerfil.MODERADOR)
-	public void adicionar(Usuario usuario) {
+	public void salvar(Usuario usuario) {
 		usuario.setId((long) business.loadAll().size() + 1);
 
 		business.save(usuario);
