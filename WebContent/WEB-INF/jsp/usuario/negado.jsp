@@ -9,7 +9,10 @@
 		<title>http://wbotelhos.com.br</title>
 	</head>
 	<body>
-		<a href="<c:url value='/'/>">Menu</a><br/>
-		<h3 style="color: red;">${message}</h3>
+		<a href="${pageContext.request.contextPath}/">In&iacute;cio</a><br/>
+		<a href="${pageContext.request.contextPath}/usuario">Listar usu&aacute;rios</a><br/>
+		<a href="${pageContext.request.contextPath}/admin">Administra&ccedil;&atilde;o</a>
+
+		<h3 style="color: red;">${notice}</h3>
 	</body>
 </html>

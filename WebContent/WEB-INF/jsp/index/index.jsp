@@ -9,7 +9,10 @@
 		<title>http://wbotelhos.com.br</title>
 	</head>
 	<body>
-		<a href="<c:url value='/usuario'/>">Listar usuários</a><br/>
-		<a href="<c:url value='/admin'/>">Administração</a>
+		<a href="${pageContext.request.contextPath}/">In&iacute;cio</a><br/>
+		<a href="${pageContext.request.contextPath}/usuario">Listar usu&aacute;rios</a><br/>
+		<a href="${pageContext.request.contextPath}/admin">Administra&ccedil;&atilde;o</a><br/><br/>
+
+		Seja bem vindo: ${userSession.user.nome}
 	</body>
 </html>
