@@ -8,7 +8,7 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.wbotelhos.business.UsuarioBusiness;
-import br.com.wbotelhos.interceptor.Permissao;
+import br.com.wbotelhos.interceptor.Permission;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
 
@@ -38,7 +38,7 @@ public class UsuarioController {
 	}
 
 	@Post("/usuario")
-	@Permissao(TipoPerfil.MODERADOR)
+	@Permission(TipoPerfil.MODERADOR)
 	public void salvar(Usuario usuario) {
 		usuario.setId((long) business.loadAll().size() + 1);
 
@@ -50,7 +50,7 @@ public class UsuarioController {
 	}
 
 	@Delete("/usuario/{usuario.id}")
-	@Permissao({ TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR })
+	@Permission({ TipoPerfil.MODERADOR, TipoPerfil.ADMINISTRADOR })
 	public void remover(Usuario usuario) {
 		business.remove(usuario);
 

@@ -11,7 +11,7 @@ import br.com.wbotelhos.model.common.TipoPerfil;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Permissao {
+public @interface Permission {
 	
 	TipoPerfil[] value();
 	
