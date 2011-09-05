@@ -9,7 +9,6 @@ import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.com.caelum.vraptor.resource.ResourceMethod;
 import br.com.wbotelhos.component.UserSession;
-import br.com.wbotelhos.controller.IndexController;
 import br.com.wbotelhos.controller.UsuarioController;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
@@ -31,18 +30,10 @@ public class PermissionInterceptor implements Interceptor {
 	}
 
 	public void intercept(InterceptorStack stack, ResourceMethod method, Object resource) {
-		Permission controllerList = method.getResource().getType().getAnnotation(Permission.class);
 		Permission metodoList = method.getMethod().getAnnotation(Permission.class);
+		Permission controllerList = method.getResource().getType().getAnnotation(Permission.class);
 
-		Usuario user = userSession.getUser();
-
-		if (user == null) {
-			if (controllerList == null && metodoList == null) {
-				stack.next(method, resource);
-			} else {
-				result.redirectTo(IndexController.class).index();
-			}
-		} else if (this.hasAccess(metodoList) && this.hasAccess(controllerList)) {
+		if (this.hasAccess(metodoList) && this.hasAccess(controllerList)) {
 			stack.next(method, resource);
 		} else {
 			result
