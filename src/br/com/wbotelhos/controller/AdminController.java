@@ -22,10 +22,9 @@ public class AdminController {
 		this.result = result;
 	}
 
-	@Get
-	@Path("/admin")
+	@Get("/admin")
 	public void admin() {
-		result.include("message", "Seja bem-vindo ao painel administrativo");
+		result.include("notice", "Seja bem-vindo ao painel administrativo");
 	}
 
 }
