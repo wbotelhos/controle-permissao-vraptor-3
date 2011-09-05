@@ -36,9 +36,7 @@ public class PermissionInterceptor implements Interceptor {
 		if (this.hasAccess(metodoList) && this.hasAccess(controllerList)) {
 			stack.next(method, resource);
 		} else {
-			result
-			.include("notice", "Você não tem permissão para tal ação!")
-			.redirectTo(UsuarioController.class).negado();
+			result.redirectTo(UsuarioController.class).negado();
 		}
 	}
 
