@@ -9,6 +9,7 @@ import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
 import br.com.caelum.vraptor.resource.ResourceMethod;
 import br.com.wbotelhos.component.UserSession;
+import br.com.wbotelhos.controller.IndexController;
 import br.com.wbotelhos.controller.UsuarioController;
 import br.com.wbotelhos.model.Usuario;
 import br.com.wbotelhos.model.common.TipoPerfil;
@@ -26,7 +27,7 @@ public class PermissionInterceptor implements Interceptor {
 
 	@SuppressWarnings("unchecked")
 	public boolean accepts(ResourceMethod method) {
-		return Arrays.asList(UsuarioController.class).contains(method.getMethod().getDeclaringClass());
+		return !Arrays.asList(IndexController.class).contains(method.getMethod().getDeclaringClass());
 	}
 
 	public void intercept(InterceptorStack stack, ResourceMethod method, Object resource) {
