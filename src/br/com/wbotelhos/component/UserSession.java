@@ -6,6 +6,11 @@ import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
 import br.com.wbotelhos.model.Usuario;
 
+/**
+ * @author Washington Botelho
+ * @article http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
+ */
+
 @Component
 @SessionScoped
 public class UserSession implements Serializable {

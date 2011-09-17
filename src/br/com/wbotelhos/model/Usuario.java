@@ -1,17 +1,17 @@
 package br.com.wbotelhos.model;
 
-import br.com.wbotelhos.model.common.TipoPerfil;
+import br.com.wbotelhos.model.common.Perfil;
 
 /**
  * @author Washington Botelho
- * @artigo http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
+ * @article http://wbotelhos.com.br/2010/04/23/controle-de-permissao-com-vraptor-3
  */
 
 public class Usuario {
 
 	private Long id;
 	private String nome;
-	private TipoPerfil perfil;
+	private Perfil perfil;
 
 	@Override
 	public boolean equals(Object obj) {
@@ -43,11 +43,11 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public TipoPerfil getPerfil() {
+	public Perfil getPerfil() {
 		return perfil;
 	}
 
-	public void setPerfil(TipoPerfil perfil) {
+	public void setPerfil(Perfil perfil) {
 		this.perfil = perfil;
 	}
 
